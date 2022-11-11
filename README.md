@@ -1,5 +1,5 @@
-**JavaSelenium Clocksoftware**
-It is a Selenium Java based test automation framework and the test scripts written for Clock Software site https://www.clock-software.com/demo-clockpms/index.html
+**Java Appium BDD**
+It is a Appium Java BDD based test automation framework and the test scripts written for Auto Trade UK app
 
 It has following features:
 
