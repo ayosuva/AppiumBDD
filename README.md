@@ -44,3 +44,48 @@ Useful commands:
 
 ```adb devices``` to list the device id of connected devices or emulator
 ``` adb install <apk path>``` to install app on the device
+
+iOS Read Device setup:
+
+<b>References:</b> </br>
+https://www.headspin.io/blog/installing-appium-2-0-and-the-driver-and-plugins-cli
+https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
+https://github.com/appium/appium-xcuitest-driver#real-devices
+
+<b>To know the WebDriverAgent root folder</b> </br>
+```appium driver install xcuitest echo "$(dirname "$(find "$HOME/.appium" -name WebDriverAgent.xcodeproj)")"```
+
+<b>To install drivers</b> </br>
+```appium driver install xcuitest```
+```appium driver install uiautomator2 ```
+
+<b>To install drivers</b> </br>
+To install Appium
+```npm install -g appium@next```
+
+<b>To install drivers</b> </br>
+To list drivers
+```appium driver list --updates```
+
+<b>To install drivers</b> </br>
+To update drivers
+```appium driver update```
+
+<b>To install drivers</b> </br>
+To uninstall Appium
+```npm uninstall -g appium```
+
+<b>To build WebDriverAgent Runner</b> </br>
+
+<b>Download the code from below link</b> </br>
+https://github.com/appium/WebDriverAgent
+
+Extract and Copy the content and paste it into WebDriverAgent root folder. Below is my webdriveragent path<br>
+```/Users/username/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent```
+
+Change the bundle identifies and Team (You can user Personal Team)
+
+Run the below commands<br>
+```mkdir -p Resources/WebDriverAgent.bundle```<br>
+```xcodebuild build-for-testing test-without-building -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>'```<br>
+```xcodebuild clean build-for-testing -project WebDriverAgent.xcodeproj -derivedDataPath appium_wda_ios -scheme WebDriverAgentRunner -destination generic/platform=iOS CODE_SIGNING_ALLOWED=YES```
