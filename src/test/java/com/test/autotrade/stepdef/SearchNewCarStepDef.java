@@ -3,6 +3,7 @@ package com.test.autotrade.stepdef;
 import com.test.autotrade.Util.DriverManager;
 import com.test.autotrade.pages.*;
 
+import com.test.integrationapp.Util.ReusableFunctions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -85,11 +86,12 @@ public class SearchNewCarStepDef {
 
     @After
     public void closeDriver(){
-        if(this.scenario.isFailed())
-        {
-            addScreenshot();
+        if(ReusableFunctions.readJsonData("defaultproperties","automationName").equals("Android")) {
+            if (this.scenario.isFailed()) {
+                addScreenshot();
+            }
+            context.getDriver().quit();
         }
-        context.getDriver().quit();
     }
     @Before
     public void setUpScenario(Scenario scenario){

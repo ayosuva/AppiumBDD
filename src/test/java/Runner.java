@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         //plugin = {"pretty", "html:target/index.html", "json:target/cucumber.json"},
         features = "src/test/resources/features",
 		plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-					"summary" } /* , tags = "@both" */ )
+					"summary" }  , tags = "@something"  )
 
 public class Runner {
 }
