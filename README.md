@@ -59,20 +59,17 @@ https://github.com/appium/appium-xcuitest-driver#real-devices
 ```appium driver install xcuitest```
 ```appium driver install uiautomator2 ```
 
-<b>To install drivers</b> </br>
-To install Appium
+<b>To install Appium</b> </br>
+
 ```npm install -g appium@next```
 
-<b>To install drivers</b> </br>
-To list drivers
+<b>To list drivers</b> </br>
 ```appium driver list --updates```
 
-<b>To install drivers</b> </br>
-To update drivers
+<b>To update drivers</b> </br>
 ```appium driver update```
 
-<b>To install drivers</b> </br>
-To uninstall Appium
+<b>To uninstall Appium</b> </br>
 ```npm uninstall -g appium```
 
 <b>To build WebDriverAgent Runner</b> </br>
@@ -83,9 +80,12 @@ https://github.com/appium/WebDriverAgent
 Extract and Copy the content and paste it into WebDriverAgent root folder. Below is my webdriveragent path<br>
 ```/Users/username/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent```
 
-Change the bundle identifies and Team (You can user Personal Team)
+Open the WebDriverAgent.xcodeproj in XCode and Change the bundle identifiers and Team (You can user Personal Team)
 
-Run the below commands<br>
-```mkdir -p Resources/WebDriverAgent.bundle```<br>
-```xcodebuild build-for-testing test-without-building -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>'```<br>
-```xcodebuild clean build-for-testing -project WebDriverAgent.xcodeproj -derivedDataPath appium_wda_ios -scheme WebDriverAgentRunner -destination generic/platform=iOS CODE_SIGNING_ALLOWED=YES```
+Run the below commands</br>
+
+```mkdir -p Resources/WebDriverAgent.bundle```</br>
+
+```xcodebuild build-for-testing test-without-building -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>'```</br>
+
+```xcodebuild clean build-for-testing -project WebDriverAgent.xcodeproj -derivedDataPath appium_wda_ios -scheme WebDriverAgentRunner -destination generic/platform=iOS CODE_SIGNING_ALLOWED=YES```</br>
