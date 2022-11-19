@@ -97,6 +97,6 @@ Run the below commands</br>
 ```xcodebuild clean build-for-testing -project WebDriverAgent.xcodeproj -derivedDataPath appium_wda_ios -scheme WebDriverAgentRunner -destination generic/platform=iOS CODE_SIGNING_ALLOWED=YES```</br>
 
 <b>References:</b> </br>
-https://www.headspin.io/blog/installing-appium-2-0-and-the-driver-and-plugins-cli
-https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
-https://github.com/appium/appium-xcuitest-driver#real-devices
+https://www.headspin.io/blog/installing-appium-2-0-and-the-driver-and-plugins-cli</br>
+https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md</br>
+https://github.com/appium/appium-xcuitest-driver#real-devices</br>
