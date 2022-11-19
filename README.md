@@ -1,3 +1,4 @@
+# Java Appium BDD 
 **Java Appium BDD**
 It is a Appium Java BDD based test automation framework and the test scripts written for Auto Trade UK app
 
@@ -40,17 +41,22 @@ Use SMTP Authentication
 Use SSL
 Port:465
 
-Useful commands:
 
+
+# Android automation setup:
+
+1. Make sure java JDK installed and JAVA_HOME set in the path. To verify the java installation use ```java -version``` in the terminal. This should display the java version
+2. Make sure android studio installed and ANDROID_HOME set in the path. To verify ANDROID_HOME path use ```adb devices``` in the terminal. This should list the connected real android devices and running android emulators
+
+<b>Useful commands:</b>
 ```adb devices``` to list the device id of connected devices or emulator
 ``` adb install <apk path>``` to install app on the device
 
-iOS Read Device setup:
 
-<b>References:</b> </br>
-https://www.headspin.io/blog/installing-appium-2-0-and-the-driver-and-plugins-cli
-https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
-https://github.com/appium/appium-xcuitest-driver#real-devices
+# iOS Real Device setup:
+
+1. Make sure java installed and JAVA_HOME set in the path
+2. Download and Install Xcode from Apple App Store
 
 <b>To know the WebDriverAgent root folder</b> </br>
 ```appium driver install xcuitest echo "$(dirname "$(find "$HOME/.appium" -name WebDriverAgent.xcodeproj)")"```
@@ -89,3 +95,8 @@ Run the below commands</br>
 ```xcodebuild build-for-testing test-without-building -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>'```</br>
 
 ```xcodebuild clean build-for-testing -project WebDriverAgent.xcodeproj -derivedDataPath appium_wda_ios -scheme WebDriverAgentRunner -destination generic/platform=iOS CODE_SIGNING_ALLOWED=YES```</br>
+
+<b>References:</b> </br>
+https://www.headspin.io/blog/installing-appium-2-0-and-the-driver-and-plugins-cli
+https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
+https://github.com/appium/appium-xcuitest-driver#real-devices
